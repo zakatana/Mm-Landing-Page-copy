@@ -1,0 +1,105 @@
+@import "./variables";
+// ==========================RESPONSIVES========================//
+@mixin for-phone-only {
+  @media only screen and(max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+// ==========================RESPONSIVES========================//
+@mixin mk-a {
+  color: $mmMainColorTwo;
+  font-size: 14px;
+  font-weight: 500;
+}
+@mixin mk-box {
+  height: 317px;
+  background-color: white;
+  border-radius: 24px;
+}
+@mixin mk-subtitle {
+  color: $mmParagraphColor;
+  font-size: 16px;
+  margin-bottom: 36px;
+  margin-top: 24px;
+}
+@mixin mk-title($fontsize) {
+  font-size: $fontsize;
+  font-weight: 500;
+  color: $mmButtonColor;
+}
+@mixin mk-button {
+  border-radius: 8px;
+  background-color: $mmSecondaryButtonColor;
+  padding: 12px 28px;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@mixin product-button($background-color, $color) {
+  border: 0px solid white;
+  background-color: $background-color;
+  color: $color;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 7px 7px;
+}
+
+@mixin btn-regular($backgroundcolor, $color) {
+  border-radius: 20px;
+  border: 2px solid #f1f3f6;
+  height: 40px;
+  background-color: $backgroundcolor;
+  padding: 0 16px 3px 18px;
+  line-height: 17px;
+  font-size: 14px;
+  color: $color;
+  font-weight: 500;
+}
+@mixin mk-icons($fontsize) {
+  color: $mmSecondaryButtonColor;
+  font-size: $fontsize;
+}
+@mixin icon-small($color) {
+  padding: 1px 7px;
+  color: $color;
+  &:hover {
+    background-color: #f1f3f6;
+    border-radius: 50%;
+  }
+}
+
+@mixin font-regular($fontsize) {
+  color: $mmMainColorOne;
+  font-size: $fontsize;
+  font-weight: 500;
+}
+
+@mixin for-box {
+  width: 23%;
+  background-color: white;
+  border-radius: 8px;
+}
